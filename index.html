@@ -1,0 +1,246 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEQ JUALAN - by DENXPLOIT</title>
+  <style>
+    * {scroll-behavior: smooth; box-sizing: border-box;}
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #000;
+      color: #00ff99;
+      overflow-x: hidden;
+    }/* Loading screen */
+#loader {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#loader h1 {
+  color: #00ff99;
+  font-size: 2em;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  50% {opacity: 0;}
+}
+
+/* Background Particles */
+.particles {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at 20% 30%, #00ff9960, transparent),
+              radial-gradient(circle at 80% 70%, #00ff9940, transparent);
+  animation: moveParticles 10s linear infinite;
+}
+@keyframes moveParticles {
+  0% {background-position: 0 0, 100% 100%;}
+  100% {background-position: 100% 100%, 0 0;}
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px 20px;
+  background-color: #121212;
+  border-bottom: 2px solid #00ff99;
+}
+.glitch {
+  font-size: 3em;
+  color: #00ff99;
+  position: relative;
+  animation: glitch 1s infinite;
+}
+@keyframes glitch {
+  0% { text-shadow: 2px 2px #ff00c8, -2px -2px #00ffff; }
+  50% { text-shadow: -2px 2px #ff00c8, 2px -2px #00ffff; }
+  100% { text-shadow: none; }
+}
+header p {
+  font-size: 1.2em;
+  color: #aaa;
+}
+
+.ticker {
+  color: #00ffcc;
+  background-color: #000;
+  padding: 10px;
+  font-size: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 0 10px #00ff99;
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.product {
+  background-color: #1b1b1b;
+  padding: 20px;
+  border: 1px solid #00ff99;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.product:nth-child(n) { animation-delay: calc(0.2s * var(--i)); }
+
+.product h2 {
+  font-size: 1.5em;
+  color: #00ffcc;
+}
+.product p { color: #ddd; }
+.price {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #00ff66;
+}
+.order-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #00ff99;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 5px #00ff99; }
+  50% { box-shadow: 0 0 20px #00ff99; }
+  100% { box-shadow: 0 0 5px #00ff99; }
+}
+.order-btn:hover {
+  background-color: #00cc77;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #121212;
+  color: #555;
+}
+footer a {
+  color: #00ff99;
+  text-decoration: none;
+}
+
+  </style>
+</head>
+<body onload="startSite()">
+  <div id="loader"><h1>BOOTING SYSTEM...</h1></div>
+  <div class="particles"></div>  <header>
+    <div class="glitch" id="typewriter"></div>
+    <p>by DENXPLOIT - Produk ilegal rasa premium 🤫</p>
+  </header>  <div class="ticker">🔥 PROMO: Jadi murid ransomware cuma 80k dapet semua tools 🔥</div>  <section class="product-list">
+    <div class="product" style="--i:1">
+      <h2>Ransomware 1.6</h2>
+      <p>Lock semua apk, korban reboot langsung error parah.</p>
+      <div class="price">Rp 40.000</div>
+      <a class="order-btn" href="https://t.me/cpl_denz" target="_blank">Order via Telegram</a>
+    </div>
+    <div class="product" style="--i:2">
+      <h2>Ransomware 1.2 Ench</h2>
+      <p>Enkripsi semua file korban. Efektif dan brutal.</p>
+      <div class="price">Rp 15.000</div>
+      <a class="order-btn" href="https://t.me/cpl_denz" target="_blank">Order via Telegram</a>
+    </div>
+    <div class="product" style="--i:3">
+      <h2>SC Bot Telegram SADAP</h2>
+      <p>Dapatkan foto, lokasi, IP, dan info penting dari korban.</p>
+      <div class="price">Harga: Nego / Private</div>
+      <a class="order-btn" href="https://t.me/cpl_denz" target="_blank">Order via Telegram</a>
+    </div>
+    <div class="product" style="--i:4">
+      <h2>Jasa Buat Logo</h2>
+      <p>Desain logo custom keren dan simple by gw sendiri.</p>
+      <div class="price">Rp 3.000</div>
+      <a class="order-btn" href="https://t.me/cpl_denz" target="_blank">Order via Telegram</a>
+    </div>
+    <div class="product" style="--i:5">
+      <h2>Murid Ransomware</h2>
+      <p>Dapat semua APK ransomware + materi full dari gw.</p>
+      <div class="price">Rp 80.000</div>
+      <a class="order-btn" href="https://t.me/cpl_denz" target="_blank">Order via Telegram</a>
+    </div>
+    <div class="product" style="--i:6">
+      <h2>Jasa Rename SC Bot</h2>
+      <p>Rename script bot biar lebih clean dan sesuai branding.</p>
+      <div class="price">Rp 10.000</div>
+      <a class="order-btn" href="https://t.me/cpl_denz" target="_blank">Order via Telegram</a>
+    </div>
+    <div class="product" style="--i:7">
+      <h2>Murid SADAP</h2>
+      <p>Belajar sadap, dapet bot, tinggal create link p dan jalanin.</p>
+      <div class="price">Rp 15.000</div>
+      <a class="order-btn" href="https://t.me/cpl_denz" target="_blank">Order via Telegram</a>
+    </div>
+    <div class="product" style="--i:8">
+      <h2>Jasa Buat APK Virus</h2>
+      <p>APK crash HP, bikin lemot / freeze, cocok buat iseng.</p>
+      <div class="price">Rp 10.000</div>
+      <a class="order-btn" href="https://t.me/cpl_denz" target="_blank">Order via Telegram</a>
+    </div>
+    <div class="product" style="--i:9">
+      <h2>Ransomware 1.4 Musik Kamera</h2>
+      <p>Lock sistem, nyalain musik otomatis + kamera ngunci.</p>
+      <div class="price">Rp 25.000</div>
+      <a class="order-btn" href="https://t.me/cpl_denz" target="_blank">Order via Telegram</a>
+    </div>
+    <div class="product" style="--i:10">
+      <h2>Jasa Buat Web</h2>
+      <p>Web sosial media, jualan, dark landing page, dll.</p>
+      <div class="price">Start dari Rp 20.000</div>
+      <a class="order-btn" href="https://t.me/cpl_denz" target="_blank">Order via Telegram</a>
+    </div>
+    <div class="product" style="--i:11">
+      <h2>Umban WA Permanent/Spam</h2>
+      <p>Jasa spam WA brutal, bisa bikin permanent ban akun.</p>
+      <div class="price">Rp 15.000 (spam) / Rp 20.000 (permanen)</div>
+      <a class="order-btn" href="https://t.me/cpl_denz" target="_blank">Order via Telegram</a>
+    </div>
+  </section>  <footer>
+    &copy; 2025 DENXPLOIT | Hubungi: <a href="https://t.me/cpl_denz" target="_blank">@cpl_denz</a>
+  </footer><audio id="typeSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_66a16421ee.mp3?filename=typewriter-1-180300.mp3"></audio>
+
+  <script>
+    const loader = document.getElementById('loader');
+    function startSite() {
+      setTimeout(() => { loader.style.display = 'none'; playTyping(); }, 2000);
+    }
+
+    function playTyping() {
+      const audio = document.getElementById('typeSound');
+      if (audio) audio.play().catch(()=>{});
+      typeWriter("WEQ JUALAN", 0);
+    }
+
+    function typeWriter(text, i) {
+      if (i < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        setTimeout(() => typeWriter(text, i + 1), 150);
+      }
+    }
+  </script></body>
+</html>
